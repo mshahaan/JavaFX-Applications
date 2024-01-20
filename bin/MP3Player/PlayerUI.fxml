@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="202.0" prefWidth="475.0" style="-fx-background-color: lightBlue;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MP3Player.ActionController">
+   <children>
+      <Label fx:id="trackname" alignment="CENTER" prefHeight="92.0" prefWidth="475.0" style="-fx-text-fill: green;" text="MP3Player">
+         <font>
+            <Font size="55.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="trackProgressBar" layoutX="-1.0" layoutY="92.0" prefWidth="475.0" progress="0.0" />
+      <FlowPane hgap="0.9" layoutX="-1.0" layoutY="112.0" prefHeight="50.0" prefWidth="475.0">
+         <children>
+            <Button fx:id="playButton" mnemonicParsing="false" onAction="#playMedia" prefHeight="40.0" prefWidth="57.0" text="PLAY">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="pauseButton" mnemonicParsing="false" onAction="#pauseMedia" prefHeight="40.0" prefWidth="82.0" text="PAUSE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="resetButton" mnemonicParsing="false" onAction="#resetMedia" prefHeight="40.0" prefWidth="72.0" text="RESET">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="previousButton" mnemonicParsing="false" onAction="#previousMedia" prefHeight="40.0" prefWidth="106.0" text="PREVIOUS">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="nextButton" mnemonicParsing="false" onAction="#nextMedia" prefHeight="40.0" prefWidth="72.0" text="NEXT">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="trackSpeedSelector" onAction="#selectSpeed" prefHeight="40.0" prefWidth="82.0" promptText="SPEED" />
+         </children>
+      </FlowPane>
+      <Slider fx:id="volumeSlider" layoutY="162.0" prefHeight="40.0" prefWidth="475.0" value="50.0" />
+   </children>
+</AnchorPane>
